@@ -4,12 +4,23 @@ var numbers = ( "0","1","2","3","4","5","6","7","8","9");
 var special = ("!","@","#","$","%","^","&","*","?");
 
 var generatePassword = function() {
-    var letterchoice = window.prompt("Do you want to include letters? type y or n");
+    var letterchoice = window.confirm("include letters? ");
+    // letterchoice = letterchoice.toLowerCase();
 
-    if (letterchoice==="y") {
-        window.alert("thank you")
+
+    if (letterchoice) {
+              
+        var index = Math.floor(Math.random() * letters.length);
+        var computerchoice = letters[index];
+        var password = computerchoice;
+        console.log(password);
+        
     }
+
+
 }
+// window.prompt("include numbers? type y or n");
+// window.prompt("include special characters? type y or n");
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
