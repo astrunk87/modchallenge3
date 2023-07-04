@@ -4,9 +4,9 @@ var numbers = ( "0","1","2","3","4","5","6","7","8","9");
 var special = ("!","@","#","$","%","^","&","*","?");
 
 var generatePassword = function() {
-    var letterchoice = window.prompt("Do you want to include letters?");
+    var letterchoice = window.prompt("Do you want to include letters? type y or n");
 
-    if (letterchoice===true) {
+    if (letterchoice==="y") {
         window.alert("thank you")
     }
 }
