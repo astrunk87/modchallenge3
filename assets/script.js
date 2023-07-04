@@ -1,5 +1,15 @@
 // Assignment code here
+var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","t","u","v","w","x","y","z"]
+var numbers = ( "0","1","2","3","4","5","6","7","8","9");
+var special = ("!","@","#","$","%","^","&","*","?");
 
+var generatePassword = function() {
+    var letterchoice = window.prompt("Do you want to include letters?");
+
+    if (letterchoice===true) {
+        window.alert("thank you")
+    }
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
