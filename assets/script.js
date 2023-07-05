@@ -25,9 +25,17 @@ var generatePassword = function() {
     if (specialchoice) {
         var index = Math.floor(Math.random() * special.length);
         console.log(special[index]);
-         pass3 = (special[index]);
+        pass3 = (special[index]);
+        //  a = pass3.repeat(lengthchoice);
+        //  console.log(a);
     }
-    alert(pass2 + pass1 + pass3);
+    if(lengthchoice < 128){
+        console.log(lengthchoice);
+}
+
+    
+    alert(pass1 + pass2 + pass3);
+    // lengthchoice*
 
 }
     
@@ -46,6 +54,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+ 
 
 }
 
