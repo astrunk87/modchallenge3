@@ -1,26 +1,41 @@
 // Assignment code here
 var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","t","u","v","w","x","y","z"]
-var numbers = ( "0","1","2","3","4","5","6","7","8","9");
-var special = ("!","@","#","$","%","^","&","*","?");
+var numbers = [ "0","1","2","3","4","5","6","7","8","9"];
+var special = ["!","@","#","$","%","^","&","*","?"];
+
+
 
 var generatePassword = function() {
-    var letterchoice = window.confirm("include letters? ");
-    // letterchoice = letterchoice.toLowerCase();
-
-
-    if (letterchoice) {
-              
+    var letterchoice = window.confirm("include letters?");
+    var numchoice = window.confirm("include numbers?");
+    var specialchoice = window.confirm("include special characters?");
+    var lengthchoice = window.prompt("enter length betwen 8 to 128");
+    
+    if (letterchoice) {              
         var index = Math.floor(Math.random() * letters.length);
-        var computerchoice = letters[index];
-        var password = computerchoice;
-        console.log(password);
-        
+        console.log(letters[index]);  
+        pass1 = (letters[index]);       
+     
     }
-
+    if (numchoice) {
+        var index = Math.floor(Math.random() * numbers.length);
+        console.log(numbers[index]);
+        pass2 = (numbers[index]); 
+    }
+    if (specialchoice) {
+        var index = Math.floor(Math.random() * special.length);
+        console.log(special[index]);
+         pass3 = (special[index]);
+    }
+    alert(pass2 + pass1 + pass3);
 
 }
-// window.prompt("include numbers? type y or n");
-// window.prompt("include special characters? type y or n");
+    
+
+// var passwordText=computerchoice;
+// console.log(passwordText);
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
