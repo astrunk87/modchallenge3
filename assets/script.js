@@ -9,14 +9,17 @@ var generatePassword = function() {
     var letterchoice = window.confirm("include letters?");
     var numchoice = window.confirm("include numbers?");
     var specialchoice = window.confirm("include special characters?");
-    var lengthchoice = window.prompt("enter length betwen 8 to 128");
+    var lengthchoice = window.prompt("enter length for passward, betwen 8 to 128");
     
+   
     if (letterchoice) {              
         var index = Math.floor(Math.random() * letters.length);
         console.log(letters[index]);  
-        pass1 = (letters[index]);       
+        pass1 = (letters[index]);   
+           
+     }
      
-    }
+
     if (numchoice) {
         var index = Math.floor(Math.random() * numbers.length);
         console.log(numbers[index]);
@@ -29,15 +32,25 @@ var generatePassword = function() {
         //  a = pass3.repeat(lengthchoice);
         //  console.log(a);
     }
-    if(lengthchoice < 128){
-        console.log(lengthchoice);
-}
+
 
     
-    alert(pass1 + pass2 + pass3);
-    // lengthchoice*
+    if(lengthchoice <=128 && lengthchoice >=8) {
+        console.log(password);
+    } else if(lengthchoice >128 || lengthchoice <8){
+        alert("please choose length between 8 and 128")
+        return
+    }  }
+    alert(password);
+    
+    
+        
+   
+    
+
 
 }
+// var lengthchoice = window.prompt("enter length betwen 8 to 128");
     
 
 // var passwordText=computerchoice;
