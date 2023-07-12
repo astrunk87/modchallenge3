@@ -1,6 +1,6 @@
 // Assignment code here
 var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","t","u","v","w","x","y","z"]
-var numbers = [ "0","1","2","3","4","5","6","7","8","9"];
+var numbers = (1234567890);
 var special = ["!","@","#","$","%","^","&","*","?"];
 
 
@@ -32,17 +32,20 @@ var generatePassword = function() {
         specialcharacters.push(special[index]);
         
     }
+    // this part was with help for my instructor
 
         
 
-    var totalcharacters = (numbers.concat(letters,special));
+    var totalcharacters = (special.concat(numbers, letters));
     console.log(totalcharacters);
 
     var temp = []
 
     for(var i = 0; i<lengthchoice; i++){
-        temp.push(Math.floor(Math.random()*totalcharacters.length));
-        
+        temp.push(Math.floor(Math.random()*specialcharacters.length));
+        console.log(lengthchoice);
+                
+                
     }
     console.log(temp);
     temp.splice(-specialcharacters.length);
@@ -52,14 +55,7 @@ var generatePassword = function() {
         temp.push(specialcharacters[i]);
 
     }
-    console.log(temp);
-    
-    var password = temp.join("");
-
-    console.log(password)
-
-
-
+   
     
     if(lengthchoice <=128 && lengthchoice >=8) {
         console.log(password);
@@ -68,7 +64,9 @@ var generatePassword = function() {
         
     }  
     alert(password);
-} 
+}
+    
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
