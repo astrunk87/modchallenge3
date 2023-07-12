@@ -38,31 +38,35 @@ var generatePassword = function() {
 
         
 
-    var totalcharacters = (special.concat(numbers, letters));
+    var totalcharacters = (special.concat(numbers + letters));
     console.log(totalcharacters);
+   
 
     var temp = []
 
     for(var i = 0; i<lengthchoice; i++){
         temp.push(Math.floor(Math.random()*specialcharacters.length));
-        console.log(lengthchoice);
+        
+        
                 
                 
     }
-    console.log(temp);
+    // console.log(temp);
     temp.splice(-specialcharacters.length);
-    console.log(temp);
+    
+    // console.log(temp);
+    
     
     for(var i = 0; i<specialcharacters.length; i++){
         temp.push(specialcharacters[i]);
-        console.log(temp);
+        // console.log(temp);
 
     }
    
     
     if(lengthchoice <=128 && lengthchoice >=8) {
         alert(temp);
-        console.log(password);
+        console.log(temp);
     } else if(lengthchoice >128 || lengthchoice <8){
         alert("please choose length between 8 and 128")
         return;
@@ -72,9 +76,7 @@ var generatePassword = function() {
     
    
     
-}
-    
-
+} 
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -82,8 +84,10 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
+  var passwordText = ("#password");
+//   console.log(password);
+//   console.log(passwordText);
+    
   passwordText.value = password;
  
 
@@ -91,3 +95,7 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// writePassword();
+
+// generatePassword();
