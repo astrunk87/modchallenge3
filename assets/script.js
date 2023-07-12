@@ -1,7 +1,9 @@
 // Assignment code here
-var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","t","u","v","w","x","y","z"]
-var numbers = (1234567890);
-var special = ["!","@","#","$","%","^","&","*","?"];
+var letters = ("abcdefghijklmnopqrstuvwxyz");
+var numbers = ("1234567890");
+var special = ("!@#$%^&?");
+
+
 
 
 
@@ -53,17 +55,23 @@ var generatePassword = function() {
     
     for(var i = 0; i<specialcharacters.length; i++){
         temp.push(specialcharacters[i]);
+        console.log(temp);
 
     }
    
     
     if(lengthchoice <=128 && lengthchoice >=8) {
+        alert(temp);
         console.log(password);
     } else if(lengthchoice >128 || lengthchoice <8){
         alert("please choose length between 8 and 128")
+        return;
         
-    }  
-    alert(password);
+    }        
+    
+    
+   
+    
 }
     
 
