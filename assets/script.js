@@ -35,6 +35,11 @@ var generatePassword = function() {
         
     }
     // this part was with help for my instructor
+    // var characters =""
+    // characters += numbers;
+    // characters += letters;
+    // characters += special;
+    // for (var) 
 
         
 
@@ -65,9 +70,13 @@ var generatePassword = function() {
    
     
     if(lengthchoice <=128 && lengthchoice >=8) {
-        alert(temp);
+        // next 2 lines from TA jessica calderon
+       var tempString = temp.join(''); //removes commas from the array
+        console.log(tempString);
+        alert(tempString);
         console.log(temp);
     } else if(lengthchoice >128 || lengthchoice <8){
+        
         alert("please choose length between 8 and 128")
         return;
         
