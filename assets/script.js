@@ -2,13 +2,15 @@
 var letters = ("abcdefghijklmnopqrstuvwxyz");
 var numbers = ("1234567890");
 var special = ("!@#$%^&?");
+var upper = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
 
 
 
 
 var generatePassword = function() {
-    var letterchoice = window.confirm("include letters?");
+    var letterchoice = window.confirm("include lowercase letters?");
+    var upperchoice = window.confirm("include uppercase letters?")
     var numchoice = window.confirm("include numbers?");
     var specialchoice = window.confirm("include special characters?");
     var lengthchoice = window.prompt("enter length for passward, betwen 8 to 128");
@@ -28,6 +30,13 @@ var generatePassword = function() {
         console.log(numbers[index]);
         specialcharacters.push(numbers[index]); 
     }
+
+    if (upperchoice) {
+        var index = Math.floor(Math.random() * upper.length);
+        console.log(upper[index]);
+        specialcharacters.push(upper[index]);
+    }
+
     if (specialchoice) {
         var index = Math.floor(Math.random() * special.length);
         console.log(special[index]);
