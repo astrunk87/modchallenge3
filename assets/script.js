@@ -44,12 +44,6 @@ var generatePassword = function() {
         
     }
     // this part was with help for my instructor
-    // var characters =""
-    // characters += numbers;
-    // characters += letters;
-    // characters += special;
-    // for (var) 
-
         
 
     var totalcharacters = (special.concat(numbers + letters));
@@ -59,13 +53,11 @@ var generatePassword = function() {
     var temp = []
 
     for(var i = 0; i<lengthchoice; i++){
+      
         temp.push(Math.floor(Math.random()*specialcharacters.length));
-        
-        
-                
-                
+                              
     }
-    // console.log(temp);
+    console.log(temp);
     temp.splice(-specialcharacters.length);
     
     // console.log(temp);
